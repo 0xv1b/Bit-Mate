@@ -8,14 +8,22 @@ from config import Config
 
 
 def main():
-    # Create an instance of QApplication
-    pycalc = QApplication(sys.argv)
-    # Show the calculator's GUI
+    app = QApplication(sys.argv)
     view = MainWindow()
     view.show()
     RootController(view=view, config=Config())
-    # Execute the calculator's main loop
-    sys.exit(pycalc.exec_())
+
+    style = """
+    QWidget {background: #505a68;}
+    QToolBar {border: 1px solid #262d37;}
+    QLabel {color: #FFFFFF;}
+    QPushButton {background: #262d37; color: #FFFFFF; border-radius: 5px; margin-top: 5px; margin-right: 5px;}
+    QPushButton:hover {background: #16181a;  margin-top: 0px; margin-right: 0px;}
+    QSpinBox {color: #000000;} 
+    """
+    app.setStyleSheet(style)
+
+    sys.exit(app.exec_())
 
 if __name__ == '__main__':
     main()

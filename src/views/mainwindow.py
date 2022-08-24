@@ -17,7 +17,7 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         
-        self.setFixedSize(480, 300)
+        self.setMinimumSize(440, 280)
         self.setWindowTitle("BitGrind")
 
         self.generalLayout = QVBoxLayout()
@@ -27,7 +27,7 @@ class MainWindow(QMainWindow):
 
         self._createMenu()
         self._createToolbar()
-        self._createStatusBar()
+        # self._createStatusBar()
         self._createLabel()
         self._createButtons()
     
@@ -71,8 +71,8 @@ class MainWindow(QMainWindow):
                    'Raids': (0, 3),
                    'Invasion': (1, 0),
                    'GVG': (1, 1),
-                   'Gauntlet': (1, 1),
-                   'Trials': (1, 2),
+                   'Gauntlet': (1, 2),
+                   'Trials': (1, 3),
                   }
                   
         for text, pos in buttons.items():
