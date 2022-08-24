@@ -5,13 +5,14 @@ from PyQt5.QtWidgets import QApplication
 from mainwindow import MainWindow
 from rootcontroller import RootController
 from config import Config
+from bot import Bot
 
 
 def main():
     app = QApplication(sys.argv)
     view = MainWindow()
     view.show()
-    RootController(view=view, config=Config())
+    RootController(view=view, bot = Bot(config = Config()))
 
     style = """
     QWidget {background: #505a68; font-family: "Lucida Console", "Courier New", monospace;}

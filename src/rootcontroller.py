@@ -1,3 +1,5 @@
+from functools import partial
+
 from views.tutorialdialog import TutorialDialog
 from views.calibrationdialog import CalibrationDialog
 from views.presetdialog import PresetDialog
@@ -18,10 +20,13 @@ from controllers.invasiondialogcontroller import InvasionDialogController
 from controllers.trialsdialogcontroller import TrialsDialogController
 from controllers.gauntletdialogcontroller import GauntletDialogController
 
+from bot import Bot
+from config import Config
+
 class RootController():
-    def __init__(self, view, config = None):
+    def __init__(self, view, bot = None):
         self._view = view
-        self._config = config
+        self._bot = bot
         
         self.tutorialdialog = TutorialDialog(parent = self._view)
         self.calibrationdialog = CalibrationDialog(parent = self._view)
@@ -37,6 +42,9 @@ class RootController():
         self._view.Toolbar().addAction("Calibrate", self.calibrationdialog.show)
         self._view.Toolbar().addAction("Preset", self.presetdialog.show)
 
+        
+        self._view.buttons['Preset'].clicked.connect(partial(self._bot.runPVP))
+
         self._connectPVPSignal()
         self._connectWBSignal()
         self._connectRaidSignal()
@@ -48,39 +56,40 @@ class RootController():
     def _connectPVPSignal(self):
         self.pvpdialog = PVPDialog(parent = self._view)
         self._view.buttons['PVP'].clicked.connect(self.pvpdialog.show)
-        PVPDialogController(self.pvpdialog)
+        PVPDialogController(self.pvpdialog, self._bot)
 
     def _connectWBSignal(self):
         self.wbdialog = WBDialog(parent = self._view)
         self._view.buttons['World Boss'].clicked.connect(self.wbdialog.show)
-        WBDialogController(self.wbdialog)
+        WBDialogController(self.wbdialog, self._bot)
     
     def _connectRaidSignal(self):
         self.raiddialog = RaidDialog(parent = self._view)
         self._view.buttons['Raids'].clicked.connect(self.raiddialog.show)
-        RaidDialogController(self.raiddialog)
+        RaidDialogController(self.raiddialog, self._bot)
 
 
     def _connectGVGSignal(self):
         self.gvgdialog = GVGDialog(parent = self._view)
         self._view.buttons['GVG'].clicked.connect(self.gvgdialog.show)
-        GVGDialogController(self.gvgdialog)
+        GVGDialogController(self.gvgdialog, self._bot)
 
     def _connectInvasionSignal(self):
         self.invasiondialog = InvasionDialog(parent = self._view)
         self._view.buttons['Invasion'].clicked.connect(self.invasiondialog.show)
-        InvasionDialogController(self.invasiondialog)
+        InvasionDialogController(self.invasiondialog, self._bot)
 
     def _connectTrialsSignal(self):
         self.trialsdialog = TrialsDialog(parent = self._view)
         self._view.buttons['Trials'].clicked.connect(self.trialsdialog.show)
-        TrialsDialogController(self.trialsdialog)
+        TrialsDialogController(self.trialsdialog, self._bot)
 
 
     def _connectGauntletSignal(self):
         self.gauntletdialog = GauntletDialog(parent = self._view)
         self._view.buttons['Gauntlet'].clicked.connect(self.gauntletdialog.show)
-        GauntletDialogController(self.gauntletdialog)
+        GauntletDialogController(self.gauntletdialog, self._bot)
+
 
     
 
