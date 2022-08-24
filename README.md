@@ -1,0 +1,3 @@
+# BitGrind
+
+How it works
