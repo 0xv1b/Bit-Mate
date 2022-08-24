@@ -4,10 +4,9 @@ import tomli
 
 class Config():
     def __init__(self):
-        #self.config = self._loadConfig()
-        pass
+        self.config = self._loadConfig()
     
-    def _loadConfig():
+    def _loadConfig(self):
         with open('../config/config.toml', 'rb') as fp:
             config = tomli.load(fp)
         return config

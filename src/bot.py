@@ -1,9 +1,27 @@
 import pyautogui
 
-origin_x = ((1920/2) - (800/2))
-origin_y = ((1080/2) - (480/2))
 
-x = origin_x + 35
-y = origin_y + 70 + 70 + 70 + 70 + 70
+class Bot():
+    def __init__(self, config):
+        self._config = config
 
-pyautogui.click(x, y)
+    def runPVP(self):
+        info = self._config._loadConfig()
+
+    def runWorldBoss(self):
+        pass
+
+    def runRaid(self):
+        pass
+
+    def runGVG(self):
+        pass
+
+    def runInvasion(self):
+        pass
+
+    def runTrials(self):
+        pass
+
+    def runGauntlet(self):
+        pass
