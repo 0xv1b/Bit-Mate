@@ -42,8 +42,6 @@ class RootController():
         self._view.Toolbar().addAction("Calibrate", self.calibrationdialog.show)
         self._view.Toolbar().addAction("Preset", self.presetdialog.show)
 
-        
-        self._view.buttons['Preset'].clicked.connect(partial(self._bot.runPVP))
 
         self._connectPVPSignal()
         self._connectWBSignal()

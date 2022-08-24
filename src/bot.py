@@ -4,9 +4,6 @@ import pyautogui
 class Bot():
     def __init__(self, config):
         self._config = config
-
-    def test(self):
-        print("HELLLLLLLOOOOOOOOO")
     
     def runPVP(self):
         info = self._config._loadConfig()

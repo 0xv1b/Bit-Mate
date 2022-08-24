@@ -2,6 +2,7 @@ from PyQt5.QtWidgets import QMainWindow
 from PyQt5.QtWidgets import QWidget
 
 from PyQt5.QtCore import Qt
+from PyQt5 import QtGui
 from PyQt5.QtWidgets import QGridLayout
 from PyQt5.QtWidgets import QLabel
 from PyQt5.QtWidgets import QPushButton
@@ -17,6 +18,7 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         
+        self.setWindowIcon(QtGui.QIcon('./assets/Icon.png'))
         self.setMinimumSize(440, 280)
         self.setWindowTitle("Bit Mate")
 
