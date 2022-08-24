@@ -6,4 +6,5 @@ We provide a simple GUI interface that allows you to configure what and how to f
 
 
 *GUI Main Window*
+
 ![Bit Mate GUI Main Window](https://github.com/0xv1b/Bit-Mate/blob/main/assets/BitMate_GUI_Main_Window.png)
