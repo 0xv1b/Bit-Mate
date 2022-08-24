@@ -1,10 +1,3 @@
-from functools import partial
-import imp
-
-import webbrowser
-
-from PyQt5.QtWidgets import QDialogButtonBox
-
 from views.tutorialdialog import TutorialDialog
 from views.calibrationdialog import CalibrationDialog
 from views.presetdialog import PresetDialog

@@ -27,7 +27,7 @@ class DialogBase(QDialog):
         self.generalLayout.addLayout(self.formLayout)
 
         self.beginButton = QPushButton("Begin")
-        self.beginButton.setMinimumHeight(20)
+        self.beginButton.setMinimumHeight(25)
         self.generalLayout.addWidget(self.beginButton)
 
         self.setLayout(self.generalLayout)

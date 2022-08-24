@@ -18,7 +18,7 @@ class MainWindow(QMainWindow):
         super().__init__()
         
         self.setMinimumSize(440, 280)
-        self.setWindowTitle("BitGrind")
+        self.setWindowTitle("Bit Mate")
 
         self.generalLayout = QVBoxLayout()
         self._centralWidget = QWidget(self)
@@ -55,7 +55,7 @@ class MainWindow(QMainWindow):
 
     def _createLabel(self):
         self.header = QLabel()
-        self.header.setText("BitGrind: The Bit Heroes Client")
+        self.header.setText("Bit Mate")
         self.header.setAlignment(Qt.AlignCenter)
         self.header.setFont(QFont('Arial', 18))
 
@@ -77,7 +77,7 @@ class MainWindow(QMainWindow):
                   
         for text, pos in buttons.items():
             self.buttons[text] = QPushButton(text)
-            self.buttons[text].setFixedSize(80, 40)
+            self.buttons[text].setFixedSize(90, 40)
             buttonsLayout.addWidget(self.buttons[text], pos[0], pos[1])
             
         self.generalLayout.addLayout(buttonsLayout)
