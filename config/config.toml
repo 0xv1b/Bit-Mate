@@ -35,12 +35,12 @@ guantlet_runs = 0
 [positions]
 
 quest = [35, 70]
-quest_exit = [0, 0]
+quest_exit = [710, 100]
 
 pvp = [35, 140]
 pvp_play = [550, 290]
 pvp_fight = [590, 220]
-pvp_exit = [0, 0]
+pvp_exit = [635, 135]
 
 world_boss = [35, 275]
 world_boss_summon_1 = [500, 460]
@@ -51,18 +51,18 @@ world_boss_difficulty = [0,0]
 world_boss_normal = [0, 0]
 world_boss_hard = [0, 0]
 world_boss_heroic = [0, 0]
-world_boss_exit = [0, 0]
+world_boss_exit = [655, 130]
 
 raid = [35, 340]
 raid_summon = [540, 375]
 raid_normal = [225, 245]
 raid_heroic = [400, 245]
 raid_hard = [590, 245]
-raid_exit = [0, 0]
+raid_exit = [625, 135]
 
 gvg = [765, 200]
 gvg_play = [545, 290]
-gvg_exit = [0, 0]
+gvg_exit = [635, 145]
 
 invasion = [765, 200]
 invasion_play = [545, 290, 0]
@@ -70,7 +70,7 @@ invasion_exit = [0, 0]
 
 trials = [765, 275]
 trials_play = [545, 290]
-traisl_exit = [0, 0]
+traisl_exit = [635, 140]
 
 gauntlet = [765, 265]
 gauntlet_play = [545, 290]
