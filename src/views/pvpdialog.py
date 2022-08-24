@@ -19,4 +19,3 @@ class PVPDialog(DialogBase):
 
         self.formLayout.addRow('Tickets', self.comboBox)
         self.formLayout.addRow('Runs', self.runsSpinBox)
-        #self.beginButton.clicked.connect(self.close)

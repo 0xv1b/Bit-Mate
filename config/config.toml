@@ -1,50 +1,77 @@
 [screen]
+
 width = 800
 height = 480
-origin_x = 1920
-origin_y = 1080
+origin = [560, 300]
+
 
 # Preset Configuration to run through
 [preset]
+
 pvp_tickets = 5
 pvp_runs = 2
+
 world_boss_difficulty = "Heroic"
 world_boss_runs = 10
+
 raid_difficulty = "Heroic"
 raid_runs = 4
+
 gvg_tickets = 0
 gvg_runs = 0
+
 invasion_tickets = 0
 invasion_runs = 0
+
 trials_tickets = 0
 trials_runs = 0
+
 guantlet_tickets = 0
 guantlet_runs = 0
 
 
-# Distance from top left corner in x and y
+
+# Distance from top left corner in x and y stored as a toml array
 [positions]
-quest = 0
-pvp = 0
-pvp_play = 0
-pvp_fight = 0
-world_boss = 0
-world_boss_summon_1 = 0
-world_boss_summon_2 = 0
-world_boss_difficulty = 0
-world_boos_normal = 0
-world_boss_hard = 0
-world_boss_heroic = 0
-raid = 0
-raid_summon = 0
-raid_normal = 0
-raid_heroic = 0
-raid_hard = 0
-gvg = 0
-gvg_play = 0
-invasion = 0
-invasion_play = 0
-trials = 0
-trials_play = 0
-guantlet = 0
-guantlet_play = 0
+
+quest = [35, 70]
+quest_exit = [0, 0]
+
+pvp = [35, 140]
+pvp_play = [550, 290]
+pvp_fight = [590, 220]
+pvp_exit = [0, 0]
+
+world_boss = [35, 275]
+world_boss_summon_1 = [500, 460]
+world_boss_summon_2 = [540, 380]
+world_boss_summon_3 = [0, 0]
+world_boss_start = [0, 0]
+world_boss_difficulty = [0,0]
+world_boss_normal = [0, 0]
+world_boss_hard = [0, 0]
+world_boss_heroic = [0, 0]
+world_boss_exit = [0, 0]
+
+raid = [35, 340]
+raid_summon = [540, 375]
+raid_normal = [225, 245]
+raid_heroic = [400, 245]
+raid_hard = [590, 245]
+raid_exit = [0, 0]
+
+gvg = [765, 200]
+gvg_play = [545, 290]
+gvg_exit = [0, 0]
+
+invasion = [765, 200]
+invasion_play = [545, 290, 0]
+invasion_exit = [0, 0]
+
+trials = [765, 275]
+trials_play = [545, 290]
+traisl_exit = [0, 0]
+
+gauntlet = [765, 265]
+gauntlet_play = [545, 290]
+gauntlet_exit = [0, 0]
