@@ -3,7 +3,7 @@
 *Bit Mate* is a tool to automate farming in Bit Heroes, this allows us to easily collect information about in game drop rates to generate our own estimates.
 
 
-> Disclaimer: The following is a purely educational project and is not intended to gain an advantage over other players, this tool is designed specifically with obtaining drop rate information, etc, in mind and has gone out its way not to including cheating mechanics such as auto-fishing. 
+> **Disclaimer:** The following is a purely educational project and is not intended to gain an advantage over other players, this tool is designed specifically with obtaining drop rate information, etc, in mind and has gone out its way not to including cheating mechanics such as auto-fishing. 
 
 > We do not condone the usage of this tool for any purposes without the permission of relevant parties.
 
