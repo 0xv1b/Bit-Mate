@@ -19,4 +19,6 @@ class Config():
         with open('../config/config.toml', mode='wt', encoding='utf-8') as fp:
             self.config["screen"]["width"] = screen.width
             self.config["screen"]["height"] = screen.height
+            # change to use bit heroes app size once we have that in the configuration
+            self.config["screen"]["origin"] = [int((screen.width / 2) - (800 / 2)), int((screen.height / 2)  - (480 / 2))]
             dump(self.config, fp)
