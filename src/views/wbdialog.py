@@ -16,6 +16,7 @@ class WBDialog(DialogBase):
         self.setWindowTitle("World Boss")
         
         self.comboBox.addItems(["Heroic", "Hard", "Normal"])
+        self.comboBox.setEnabled(False)
 
         self.formLayout.addRow('Difficulty', self.comboBox)
         self.formLayout.addRow('Runs', self.runsSpinBox)

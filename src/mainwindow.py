@@ -75,7 +75,6 @@ class MainWindow(QMainWindow):
         
         self.buttons["Preset"].setEnabled(False)
         self.buttons["World Boss"].setEnabled(False)
-        self.buttons["Raids"].setEnabled(False)
         self.buttons["Invasion"].setEnabled(False)
         self.buttons["GVG"].setEnabled(False)
         self.buttons["Trials"].setEnabled(False)

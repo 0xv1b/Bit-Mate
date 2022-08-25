@@ -33,7 +33,7 @@ guantlet_runs = 0
 
 # Distance from top left corner in x and y stored as a toml array
 # Contains all the different buttons provided in the UI
-[positions]
+[position]
 
 quest = [35, 70]
 quest_exit = [710, 100]
@@ -59,8 +59,10 @@ world_boss_exit = [655, 130]
 raid = [35, 340]
 raid_summon = [540, 375]
 raid_normal = [225, 245]
-raid_heroic = [400, 245]
-raid_hard = [590, 245]
+raid_hard = [400, 245]
+raid_heroic = [590, 245]
+raid_accept = [510, 465]
+raid_town = [485, 475]
 raid_exit = [625, 135]
 
 gvg = [765, 200]
