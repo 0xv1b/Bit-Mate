@@ -74,7 +74,6 @@ class MainWindow(QMainWindow):
             buttonsLayout.addWidget(self.buttons[text], pos[0], pos[1])
         
         self.buttons["Preset"].setEnabled(False)
-        self.buttons["World Boss"].setEnabled(False)
         self.buttons["Invasion"].setEnabled(False)
         self.buttons["GVG"].setEnabled(False)
         self.buttons["Trials"].setEnabled(False)

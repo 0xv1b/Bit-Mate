@@ -36,7 +36,7 @@ class Bot():
                 sleep(1)
                 pyautogui.click(pvp_accept)
                 # So we don't interact with an item and hide the button from view
-                pyautogui.moveTo(0, 0)
+                pyautogui.moveTo(100, 100)
                 sleep(pvp_duration)
                 pyautogui.click(pvp_town)
                 sleep(3)
@@ -47,7 +47,47 @@ class Bot():
 
 
     def runWorldBoss(self, times):
-        pass
+        logging.debug(f"Running World Boss {times} times")
+
+        info = self._config._loadConfig()
+
+        wb = self.calculatePosition(info["position"]["world_boss"])
+        wb_summon_1 = self.calculatePosition(info["position"]["world_boss_summon_1"])
+        wb_summon_2 = self.calculatePosition(info["position"]["world_boss_summon_2"])
+        wb_summon_3 = self.calculatePosition(info["position"]["world_boss_summon_3"])
+        wb_start = self.calculatePosition(info["position"]["world_boss_start"])
+        wb_confirm = self.calculatePosition(info["position"]["world_boss_confirm"])
+        wb_town = self.calculatePosition(info["position"]["world_boss_town"])
+        wb_exit = self.calculatePosition(info["position"]["world_boss_exit"])
+
+        wb_duration = info["duration"]["world_boss"]
+
+    
+        def aux():
+            for _ in range(times):
+                pyautogui.click(wb)
+                sleep(1)
+                # 3 summons cos we arent selecting which world boss right now
+                pyautogui.click(wb_summon_1)
+                sleep(1)
+                pyautogui.click(wb_summon_2)
+                sleep(1)
+                pyautogui.click(wb_summon_3)
+                sleep(1)
+                pyautogui.click(wb_start)
+                sleep(1)
+                # Confirm in a 1 player team
+                pyautogui.click(wb_confirm)
+                # So we don't interact with an item and hide the button from view
+                pyautogui.moveTo(100, 100)
+                sleep(wb_duration)
+                pyautogui.click(wb_town)
+                sleep(3)
+                pyautogui.click(wb_exit)   
+                sleep(1)
+        
+        Thread(target=aux).start()
+
 
     def runRaid(self, times, difficulty = "Heroic"):
         logging.debug(f"Running Raid {times} times at {difficulty} difficulty")
@@ -82,7 +122,7 @@ class Bot():
                 sleep(1)
                 pyautogui.click(raid_accept)
                 # so we dont interact with items and block the button from view
-                pyautogui.moveTo(0, 0)
+                pyautogui.moveTo(100, 100)
                 sleep(raid_duration)
                 pyautogui.click(raid_town)
                 sleep(3)

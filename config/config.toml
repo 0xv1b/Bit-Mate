@@ -47,13 +47,15 @@ pvp_exit = [635, 135]
 
 world_boss = [35, 275]
 world_boss_summon_1 = [500, 460]
-world_boss_summon_2 = [540, 380]
-world_boss_summon_3 = [0, 0]
-world_boss_start = [0, 0]
-world_boss_difficulty = [0,0]
+world_boss_summon_2 = [545, 380]
+world_boss_summon_3 = [475, 405]
+world_boss_start = [385, 465]
+world_boss_confirm = [340, 365]
+world_boss_difficulty = [0, 0]
 world_boss_normal = [0, 0]
 world_boss_hard = [0, 0]
 world_boss_heroic = [0, 0]
+world_boss_town = [555, 470]
 world_boss_exit = [655, 130]
 
 raid = [35, 340]
@@ -84,7 +86,7 @@ gauntlet_exit = [0, 0]
 
 [duration]
 pvp = 15
-world_boss = 25
+world_boss = 10
 raid = 480
 gvg = 480
 invasion = 480

@@ -1,6 +1,6 @@
     QWidget {
 
-        background-image: url(./assets/Background.png); 
+        background: #76d7c4;
         font-family: "Lucida Console", "Courier New", monospace;
 
     }
@@ -19,17 +19,19 @@
 
     QPushButton {
 
-        background: #262d37; 
-        color: #FFFFFF; 
+        background: transparent; 
+        color: #2e86c1; 
         border-radius: 5px; 
-        margin-top: 5px; 
-        margin-right: 5px;
+        margin-top: 4px; 
+        margin-right: 4px;
+        border: 1px solid #2e86c1;
 
     }
 
     QPushButton:hover {
 
-        background: #16181a;  
+        background: #2e86c1;  
+        color: #FFFFFF;
         margin-top: 0px; 
         margin-right: 0px;
 
