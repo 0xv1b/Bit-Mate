@@ -1,30 +1,43 @@
 import pyautogui
-from functools import partial
 from threading import Timer
+from threading import Thread
+from time import sleep
 
 
 class Bot():
     def __init__(self, config):
         self._config = config
     
-    def runPVP(self):
+    def runPVP(self, times):
         info = self._config._loadConfig()
+        print(times)
+
         pvp = self.calculatePosition(info["positions"]["pvp"])
-        print(pvp)
         pvp_play = self.calculatePosition(info["positions"]["pvp_play"])
         pvp_fight = self.calculatePosition(info["positions"]["pvp_fight"])
         pvp_accept = self.calculatePosition(info["positions"]["pvp_accept"])
         pvp_town = self.calculatePosition(info["positions"]["pvp_town"])
         pvp_exit = self.calculatePosition(info["positions"]["pvp_exit"])
+
         pvp_duration = info["duration"]["pvp"]
 
+        def aux():
+            for x in range(times):
+                pyautogui.click(pvp)
+                sleep(1)
+                pyautogui.click(pvp_play)
+                sleep(1)
+                pyautogui.click(pvp_fight)
+                sleep(1)
+                pyautogui.click(pvp_accept)
+                sleep(pvp_duration)
+                pyautogui.click(pvp_town)
+                sleep(2)
+                pyautogui.click(pvp_exit)   
+                sleep(1)
+        
+        Thread(target=aux).start()
 
-        Timer(1, pyautogui.click, args = pvp).start()
-        Timer(2, pyautogui.click, args = pvp_play).start()
-        Timer(3, pyautogui.click, args = pvp_fight).start()
-        Timer(4, pyautogui.click, args = pvp_accept).start()
-        Timer(pvp_duration + 5, pyautogui.click, args = pvp_town).start()
-        Timer(25, pyautogui.click, args = pvp_exit).start()
 
     def runWorldBoss(self):
         pass

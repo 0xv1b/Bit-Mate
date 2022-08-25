@@ -18,7 +18,6 @@ class PVPDialog(DialogBase):
         self.comboBox.addItems(["1", "2", "3", "4", "5"])
 
         self.comboBox.setEnabled(False)
-        self.runsSpinBox.setEnabled(False)
 
         self.formLayout.addRow('Tickets', self.comboBox)
         self.formLayout.addRow('Runs', self.runsSpinBox)

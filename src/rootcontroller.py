@@ -36,11 +36,11 @@ class RootController():
 
 
     def _connectSignals(self):
-        self._view.Menu().addAction("Tutorial", self.tutorialdialog.show)
+        self._view.menu.addAction("Tutorial", self.tutorialdialog.show)
 
 
-        self._view.Toolbar().addAction("Calibrate", self.calibrationdialog.show)
-        self._view.Toolbar().addAction("Preset", self.presetdialog.show)
+        self._view.toolBar.addAction("Calibrate", self.calibrationdialog.show)
+        self._view.toolBar.addAction("Preset", self.presetdialog.show)
 
 
         self._connectPVPSignal()

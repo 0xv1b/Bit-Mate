@@ -7,5 +7,11 @@ class PVPDialogController():
         self._connectSignals()
     
     def _connectSignals(self):
+        # why do we need to use partial?
+
         self._view.beginButton.clicked.connect(self._view.close)
-        self._view.beginButton.clicked.connect(partial(self._bot.runPVP))
+        # is there a way to always get the newest value of runs, use lazy evaluation
+        self._view.beginButton.clicked.connect(partial(self.hackyworkaround))
+    
+    def hackyworkaround(self):
+        self._bot.runPVP(self._view.runsSpinBox.value())

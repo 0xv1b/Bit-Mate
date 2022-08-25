@@ -37,23 +37,14 @@ class MainWindow(QMainWindow):
         self.menu = self.menuBar().addMenu("Menu")
         self.menu.addAction('Exit', self.close)
     
-    def Menu(self):
-        return self.menu
-
     def _createToolbar(self):
-        self.tools = QToolBar()
-        self.addToolBar(self.tools)
-
-    def Toolbar(self):
-        return self.tools
-
+        self.toolBar = QToolBar()
+        self.addToolBar(self.toolBar)
+    
     def _createStatusBar(self):
         self.status = QStatusBar()
         self.status.showMessage("Check us out on GitHub")
         self.setStatusBar(self.status)
-
-    def StatusBar(self):
-        self.status
 
     def _createLabel(self):
         self.header = QLabel()

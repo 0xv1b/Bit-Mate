@@ -40,8 +40,8 @@ quest_exit = [710, 100]
 
 pvp = [35, 140]
 pvp_play = [550, 290]
-pvp_fight = [590, 210]
-pvp_accept = [515, 465]
+pvp_fight = [590, 200]
+pvp_accept = [515, 455]
 pvp_town = [490, 475]
 pvp_exit = [635, 135]
 
