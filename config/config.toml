@@ -32,6 +32,7 @@ guantlet_runs = 0
 
 
 # Distance from top left corner in x and y stored as a toml array
+# Contains all the different buttons provided in the UI
 [positions]
 
 quest = [35, 70]
@@ -39,7 +40,9 @@ quest_exit = [710, 100]
 
 pvp = [35, 140]
 pvp_play = [550, 290]
-pvp_fight = [590, 220]
+pvp_fight = [590, 210]
+pvp_accept = [515, 465]
+pvp_town = [490, 475]
 pvp_exit = [635, 135]
 
 world_boss = [35, 275]
@@ -75,3 +78,7 @@ traisl_exit = [635, 140]
 gauntlet = [765, 265]
 gauntlet_play = [545, 290]
 gauntlet_exit = [0, 0]
+
+
+[duration]
+pvp = 10

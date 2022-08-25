@@ -7,4 +7,5 @@ class PVPDialogController():
         self._connectSignals()
     
     def _connectSignals(self):
+        self._view.beginButton.clicked.connect(self._view.close)
         self._view.beginButton.clicked.connect(partial(self._bot.runPVP))
