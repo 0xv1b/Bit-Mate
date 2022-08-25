@@ -1,4 +1,5 @@
 import pyautogui
+import logging
 from threading import Timer
 from threading import Thread
 from time import sleep
@@ -7,11 +8,14 @@ from time import sleep
 class Bot():
     def __init__(self, config):
         self._config = config
+
+        logging.basicConfig(level=logging.DEBUG, filename='../log/app.log', filemode='w', format='%(asctime)s - %(levelname)s - %(message)s')
+        logging.debug("Setup Logging")
     
     def runPVP(self, times):
+        logging.debug(f"Running PVP {times} times.")
+        
         info = self._config._loadConfig()
-        print(times)
-
         pvp = self.calculatePosition(info["positions"]["pvp"])
         pvp_play = self.calculatePosition(info["positions"]["pvp_play"])
         pvp_fight = self.calculatePosition(info["positions"]["pvp_fight"])
