@@ -27,7 +27,7 @@ class Bot():
         pvp_duration = info["duration"]["pvp"]
 
         def aux():
-            for x in range(times):
+            for _ in range(times):
                 pyautogui.click(pvp)
                 sleep(1)
                 pyautogui.click(pvp_play)
@@ -66,7 +66,7 @@ class Bot():
         raid_duration = info["duration"]["raid"]
 
         def aux():
-            for x in range(times):
+            for _ in range(times):
                 pyautogui.click(raid)
                 sleep(1)
                 pyautogui.click(raid_summon)
