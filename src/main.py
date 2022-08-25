@@ -20,6 +20,7 @@ def main():
     QLabel {color: #FFFFFF;}
     QPushButton {background: #262d37; color: #FFFFFF; border-radius: 5px; margin-top: 5px; margin-right: 5px;}
     QPushButton:hover {background: #16181a;  margin-top: 0px; margin-right: 0px;}
+    QPushButton:disabled {background: #aeaeae;}
     QSpinBox {color: #000000;} 
     """
     app.setStyleSheet(style)

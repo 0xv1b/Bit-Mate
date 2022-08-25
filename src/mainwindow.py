@@ -73,13 +73,21 @@ class MainWindow(QMainWindow):
                    'Raids': (0, 3),
                    'Invasion': (1, 0),
                    'GVG': (1, 1),
-                   'Gauntlet': (1, 2),
-                   'Trials': (1, 3),
+                   'Trials': (1, 2),
+                   'Gauntlet': (1, 3),
                   }
                   
         for text, pos in buttons.items():
             self.buttons[text] = QPushButton(text)
             self.buttons[text].setFixedSize(90, 40)
             buttonsLayout.addWidget(self.buttons[text], pos[0], pos[1])
+        
+        self.buttons["Preset"].setEnabled(False)
+        self.buttons["World Boss"].setEnabled(False)
+        self.buttons["Raids"].setEnabled(False)
+        self.buttons["Invasion"].setEnabled(False)
+        self.buttons["GVG"].setEnabled(False)
+        self.buttons["Trials"].setEnabled(False)
+        self.buttons["Gauntlet"].setEnabled(False)
             
         self.generalLayout.addLayout(buttonsLayout)

@@ -81,4 +81,10 @@ gauntlet_exit = [0, 0]
 
 
 [duration]
-pvp = 10
+pvp = 15
+world_boss = 25
+raid = 480
+gvg = 480
+invasion = 480
+trials = 300
+gauntlet = 300

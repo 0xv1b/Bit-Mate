@@ -19,12 +19,12 @@ class Bot():
         pvp_duration = info["duration"]["pvp"]
 
 
-        Timer(1, lambda : pyautogui.click(pvp)).start()
-        Timer(2, lambda : pyautogui.click(pvp_play)).start()
-        Timer(3, lambda : pyautogui.click(pvp_fight)).start()
-        Timer(4, lambda : pyautogui.click(pvp_accept)).start()
-        Timer(pvp_duration + 5, lambda : pyautogui.click(pvp_town)).start()
-        Timer(20, lambda : pyautogui.click(pvp_exit)).start()
+        Timer(1, task = pyautogui.click, args = pvp).start()
+        Timer(2, task = pyautogui.click, args = pvp_play).start()
+        Timer(3, task = pyautogui.click, args = pvp_fight).start()
+        Timer(4, task = pyautogui.click, args = pvp_accept).start()
+        Timer(pvp_duration + 5, task = pyautogui.click, args = pvp_town).start()
+        Timer(25, task = pyautogui.click, args = pvp_exit).start()
 
     def runWorldBoss(self):
         pass
