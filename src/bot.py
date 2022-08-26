@@ -1,4 +1,3 @@
-from inspect import classify_class_attrs
 import pyautogui
 import logging
 from threading import Timer
